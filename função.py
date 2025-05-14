@@ -24,6 +24,16 @@ def cadastrar_produto(nome, quantidade, preco):
     conexao.close()
 
 # função de busca larissa
+def buscar_produtos():
+    conexao = conectar_banco()
+    cursor = conexao.cursor(dictionary=True)
+    sql = 'SELECT * FROM produto'
+    cursor.execute(sql)
+    resultado = cursor.fetchall()
+    print(resultado)
+    conexao.close()
+    return resultado
+
 
 
 # Função Ismael
