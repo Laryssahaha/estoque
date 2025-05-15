@@ -39,4 +39,5 @@ while True:
         print('---------- Remover Produto ----------')
         print('')
         nome = input('Digite o Nome Do Produto: ')
+        mf.remover_produto(nome)
         print('')
