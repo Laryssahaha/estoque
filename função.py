@@ -45,3 +45,13 @@ def atualizar_produto(preco, id):
     conexao.commit()
     conexao.close()
     print('Produto Atualizado com Sucesso!!!')
+
+    def remover_produto(nome):
+        conexao = conectar_banco()
+        cursor = conexao.cursor()
+        sql = 'DELETE FROM produto WHERE nome = %s'
+        cursor.execute(sql, (nome,))
+        conexao.commit()
+        conexao.close()
+        print('Produto Removido com Sucesso!!!')
+    # 4. Criar uma função para atualizar produtos
